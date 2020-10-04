@@ -1,3 +1,3 @@
 module.exports = {
-  get: jest.fn(() => Promise.resolve({ data: { result: [] } }))
+  get: jest.fn(() => Promise.resolve({ data: { results: [] } }))
 }

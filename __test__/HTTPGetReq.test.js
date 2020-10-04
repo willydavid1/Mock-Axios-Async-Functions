@@ -1,8 +1,10 @@
 const mockAxios = require('axios')
 const asyncFuntion = require('../HTTPGetReq')
 
+// jest.mock('axios') // no necesitamos del | __mocks__ => axios.js (simulando la funcion get que realiza la peticion) | es decir podemos borrar __mocks__
+
 it('fetches data from unsplash', async () => {
-  // setup
+  // setup | mockFn.mockImplementationOnce(fn) | jest.fn().mockImplementationOnce(fn) | Acepta una función que se utilizará como una implementación de la funcion de mock para una llamada a la función mockeada. Puede ser encadenado para que varias llamadas de función produzcan resultados distintos.
   mockAxios.get.mockImplementationOnce(() => Promise.resolve({
     data: {
       results: ['cat.jpg'],
